@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sc7-pH-Qvu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KfA-Ng-ECq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Item 2-->
+        <scene sceneID="oj1-DE-uu7">
+            <objects>
+                <viewController id="kxK-bW-3uO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="55h-5l-9nN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ID8-AZ-n9j"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="Gsl-Mh-9e7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JTk-pl-5uJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="-963"/>
+        </scene>
         <!--Game-->
         <scene sceneID="pU4-cM-5fz">
             <objects>
@@ -73,7 +90,7 @@
                     <navigationItem key="navigationItem" title="Game" id="3eN-cj-kSF">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hOp-op-o7o">
                             <connections>
-                                <segue destination="kEl-04-Kin" kind="presentation" customClass="CustomAnimationPresentationSegue" customModule="UIStoryBoardDemo" customModuleProvider="target" id="7oM-BL-QsV"/>
+                                <segue destination="kEl-04-Kin" kind="presentation" id="7oM-BL-QsV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -152,12 +169,12 @@
                     <navigationItem key="navigationItem" title="Game Add" id="y04-CI-RCV">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="aeo-ai-cpB">
                             <connections>
-                                <segue destination="eQ8-Rq-FGL" kind="unwind" customClass="CustomAnimationPresentationSegue" customModule="UIStoryBoardDemo" customModuleProvider="target" unwindAction="cancelToGameVC:" id="qCG-56-HgB"/>
+                                <segue destination="eQ8-Rq-FGL" kind="unwind" unwindAction="cancelToGameVC:" id="qCG-56-HgB"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="jqO-Cc-CGl">
                             <connections>
-                                <segue destination="eQ8-Rq-FGL" kind="unwind" identifier="GameAddDetail" customClass="CustomAnimationPresentationSegue" customModule="UIStoryBoardDemo" customModuleProvider="target" unwindAction="saveGameDetail:" id="EKh-PS-tsA"/>
+                                <segue destination="eQ8-Rq-FGL" kind="unwind" identifier="GameAddDetail" unwindAction="saveGameDetail:" id="EKh-PS-tsA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -170,6 +187,24 @@
                 <exit id="eQ8-Rq-FGL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2818" y="-195"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Prb-lh-cAd">
+            <objects>
+                <tabBarController id="KfA-Ng-ECq" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="P0N-zL-hfo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Sc7-pH-Qvu" kind="relationship" relationship="viewControllers" id="Lkh-co-0Cj"/>
+                        <segue destination="kxK-bW-3uO" kind="relationship" relationship="viewControllers" id="cda-yR-2Yk"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iud-Yw-6eH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-254" y="-193"/>
         </scene>
         <!--Item-->
         <scene sceneID="UIb-TX-DeT">
